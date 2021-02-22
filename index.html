@@ -4,9 +4,16 @@
   <link rel="stylesheet" href="main.css">
   <script src="https://unpkg.com/vue@next"></script>
 </head>
+
 <body>
-  <div id="hello-vue" class="demo">
-    {{ message }}
+  <div id="learning-site-videos">
+    <div class="video-grid-container">
+      <learning-video
+        v-for="item in videoList"
+        v-bind:video="item"
+        v-bind:key="item.id"
+      ></learning-video>
+    </div                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         >
   </div>
 </body>
 
