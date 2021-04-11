@@ -1,3 +1,11 @@
+html,
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .video-grid-container {
     display: flex;
     flex-wrap: wrap;
@@ -17,4 +25,47 @@
 .youtube-video {
     width: 350px; 
     height: 200px;
+}
+
+.navbar {
+	width: 100%;
+	text-align: right;
+}
+
+.navbar__unordered-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #1d1283;
+}
+
+.navbar__list {
+	float: left;
+}
+
+.navbar__hyper {
+	display: block;
+	border-radius: 0.5rem;
+	color: #ffffff;
+	font-weight: bolder;
+	text-align: center;
+	padding: 19px 16px;
+	text-decoration: none;
+}
+
+.navbar .navbar__hyper--active {
+	color: #87d870;
+}
+
+.navbar .navbar__hyper:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.navbar .navbar__hyper--logo {
+	padding: 7px !important;
+}
+
+.navbar .navbar__logo {
+	width: 42px;
 }

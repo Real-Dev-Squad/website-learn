@@ -7,6 +7,9 @@
 
 <body>
   <div id="learning-site-videos">
+    <navbar
+      :sites="navbarItems"
+    ></navbar>
     <div class="video-grid-container">
       <learning-video
         v-for="item in videoList"

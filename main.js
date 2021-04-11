@@ -56,7 +56,38 @@ const VideoList = {
           source:'https://www.youtube.com/embed/MhkGQAoc7bc',
           author: 'Someone\'s Buddy'  
         }
-      ]
+      ],
+      navbarItems: [
+        {
+          name: 'Home',
+          src: 'https://www.realdevsquad.com',
+        },
+        {
+          name: 'Welcome',
+          src: 'https://welcome.realdevsquad.com',
+        },
+        {
+          name: 'Events',
+          src: 'https://www.realdevsquad.com/events.html',
+        },
+        {
+          name: 'Members',
+          src: 'https://members.realdevsquad.com',
+        },
+        {
+          name: 'Crypto',
+          src: 'https://crypto.realdevsquad.com',
+        },
+        {
+          name: 'Status',
+          src: 'https://status.realdevsquad.com',
+        },
+        {
+          name: 'Learn',
+          src: '#',
+          active: true,
+        },
+      ],
     }
   }
 }
@@ -75,6 +106,39 @@ app.component('learning-video', {
     <i> <label> Author: </label> <b> {{ video.author }} </b> </i>
   </div>
   `
-})                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+})      
+
+app.component('navbar', {
+  props: ['sites'],
+  template: `
+  <nav class="navbar">
+    <ul class="navbar__unordered-list">
+      <li class="navbar__list">
+        <a href="/" class="navbar__hyper navbar__hyper--logo">
+          <img class="navbar__logo" src="./assets/images/Real-Dev-Squad@1x.png" alt="Real Dev Squad">
+        </a>
+      </li>
+      <navbar-item
+        v-for="site in sites"
+        :site="site"
+      >
+      </navbar-item>
+    </ul>
+  </nav>
+  `
+});
+
+app.component('navbar-item', {
+  props: ['site'],
+  template: `
+    <li class="navbar__list">
+      <a class="navbar__hyper" 
+         :href="site.src"
+         :class="{ 'navbar__hyper--active': site.active }"
+      >
+         {{ site.name }}
+      </a>
+    </li>`,
+});
 
 app.mount('#learning-site-videos')          
