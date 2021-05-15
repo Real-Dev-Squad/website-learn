@@ -1,10 +1,26 @@
 <template>
-  <div id="nav">
+  <Header />
+  <!-- <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+  </div> -->
+  <main>
+    <router-view/>
+  </main>
+  <Footer />
 </template>
+
+<script>
+import Header from '@/components/Header/index.vue';
+import Footer from '@/components/Footer/index.vue';
+
+export default {
+  name: 'Home',
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
 
 <style>
 #app {
@@ -13,18 +29,32 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+
+  height: 100vh;
+  /* grid container settings */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
 }
 
-#nav {
-  padding: 30px;
+#app > header {
+  grid-area: header;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+#app > main {
+  grid-area: main;
+  padding: 15px 5px 10px 5px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#app > footer {
+  grid-area: footer;
+}
+
+body {
+  margin: 0;
 }
 </style>
