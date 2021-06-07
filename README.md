@@ -1,5 +1,7 @@
 # vue-tutorial
 
+Temporary Deployment: https://website-learn.netlify.app/
+
 ## Project setup
 ```
 yarn install
