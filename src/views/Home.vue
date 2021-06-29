@@ -6,8 +6,8 @@
       <div class="video-grid-container">
         <LearningVideo
           v-for="item in videoList"
-          v-bind:video="item"
-          v-bind:key="item.id"
+          :video="item"
+          :key="item.id"
         />
       </div>
     </div>
@@ -19,6 +19,9 @@
 import HelloWorld from '@/components/HelloWorld.vue';
 import LearningVideo from '@/components/LearningVideo/index.vue';
 
+// constants
+import videoList from '@/constants';
+
 export default {
   name: 'Home',
   components: {
@@ -27,50 +30,7 @@ export default {
   },
   data() {
     return {
-      videoList: [
-        {
-          id: 0,
-          title: 'Getting started with VueJ',
-          source: 'https://www.youtube.com/embed/gdZH7Anh_6w',
-          author: 'Someone',
-        },
-        {
-          id: 1,
-          title: 'What even is components?',
-          source: 'https://www.youtube.com/embed/FMl8vXPGqCI',
-          author: 'Buddy',
-        },
-        {
-          id: 2,
-          title: 'Was that an appropriate Reaction?',
-          source: 'https://www.youtube.com/embed/MhkGQAoc7bc',
-          author: 'Someones Buddy',
-        },
-        {
-          id: 3,
-          title: 'What even is components?',
-          source: 'https://www.youtube.com/embed/FMl8vXPGqCI',
-          author: 'Buddy',
-        },
-        {
-          id: 4,
-          title: 'Was that an appropriate Reaction?',
-          source: 'https://www.youtube.com/embed/MhkGQAoc7bc',
-          author: 'Someones Buddy',
-        },
-        {
-          id: 5,
-          title: 'What even is components?',
-          source: 'https://www.youtube.com/embed/FMl8vXPGqCI',
-          author: 'Buddy',
-        },
-        {
-          id: 6,
-          title: 'Was that an appropriate Reaction?',
-          source: 'https://www.youtube.com/embed/MhkGQAoc7bc',
-          author: 'Someones Buddy',
-        },
-      ],
+      videoList,
     };
   },
 };
@@ -82,9 +42,18 @@ export default {
   margin: 0 auto;
 }
 .video-grid-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 350px);
+    justify-content: space-between;
     grid-gap: 20px;
-    justify-content: flex-start;
+}
+#learning-site-videos {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1135px) {
+  .video-grid-container {
+    justify-content: center;
+  }
 }
 </style>
