@@ -2,6 +2,7 @@
   <div class="wrapper">
     <!-- <Header /> -->
     <HelloWorld msg="Router/Page based content goes here. " />
+    <ModalPrefer />
     <div id="learning-site-videos">
       <div class="video-grid-container">
         <LearningVideo
@@ -17,12 +18,14 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
+import ModalPrefer from '@/components/ModalPrefer/index.vue';
 import LearningVideo from '@/components/LearningVideo/index.vue';
 
 export default {
   name: 'Home',
   components: {
     HelloWorld,
+    ModalPrefer,
     LearningVideo,
   },
   data() {
@@ -40,36 +43,36 @@ export default {
           source: 'https://www.youtube.com/embed/FMl8vXPGqCI',
           author: 'Buddy',
         },
-        {
-          id: 2,
-          title: 'Was that an appropriate Reaction?',
-          source: 'https://www.youtube.com/embed/MhkGQAoc7bc',
-          author: 'Someones Buddy',
-        },
-        {
-          id: 3,
-          title: 'What even is components?',
-          source: 'https://www.youtube.com/embed/FMl8vXPGqCI',
-          author: 'Buddy',
-        },
-        {
-          id: 4,
-          title: 'Was that an appropriate Reaction?',
-          source: 'https://www.youtube.com/embed/MhkGQAoc7bc',
-          author: 'Someones Buddy',
-        },
-        {
-          id: 5,
-          title: 'What even is components?',
-          source: 'https://www.youtube.com/embed/FMl8vXPGqCI',
-          author: 'Buddy',
-        },
-        {
-          id: 6,
-          title: 'Was that an appropriate Reaction?',
-          source: 'https://www.youtube.com/embed/MhkGQAoc7bc',
-          author: 'Someones Buddy',
-        },
+        // {
+        //   id: 2,
+        //   title: 'Was that an appropriate Reaction?',
+        //   source: 'https://www.youtube.com/embed/MhkGQAoc7bc',
+        //   author: 'Someones Buddy',
+        // },
+        // {
+        //   id: 3,
+        //   title: 'What even is components?',
+        //   source: 'https://www.youtube.com/embed/FMl8vXPGqCI',
+        //   author: 'Buddy',
+        // },
+        // {
+        //   id: 4,
+        //   title: 'Was that an appropriate Reaction?',
+        //   source: 'https://www.youtube.com/embed/MhkGQAoc7bc',
+        //   author: 'Someones Buddy',
+        // },
+        // {
+        //   id: 5,
+        //   title: 'What even is components?',
+        //   source: 'https://www.youtube.com/embed/FMl8vXPGqCI',
+        //   author: 'Buddy',
+        // },
+        // {
+        //   id: 6,
+        //   title: 'Was that an appropriate Reaction?',
+        //   source: 'https://www.youtube.com/embed/MhkGQAoc7bc',
+        //   author: 'Someones Buddy',
+        // },
       ],
     };
   },
