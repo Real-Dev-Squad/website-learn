@@ -2,6 +2,7 @@
   <div class="wrapper">
     <!-- <Header /> -->
     <HelloWorld msg="Router/Page based content goes here. " />
+    <modal-prefer></modal-prefer>
     <div id="learning-site-videos">
       <div class="video-grid-container">
         <LearningVideo
@@ -18,6 +19,7 @@
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
 import LearningVideo from '@/components/LearningVideo/index.vue';
+import ModalPrefer from '@/components/ModalPrefer/index.vue';
 
 // constants
 import videoList from '@/constants';
@@ -26,6 +28,7 @@ export default {
   name: 'Home',
   components: {
     HelloWorld,
+    ModalPrefer,
     LearningVideo,
   },
   data() {
