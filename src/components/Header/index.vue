@@ -12,14 +12,21 @@
           RDS - Learn Site
         </a>
       </li>
+      <li>
+        <Bookmarks />
+      </li>
     </ul>
   </header>
 </template>
 
 <script>
+import Bookmarks from '@/components/Bookmarks/index.vue';
 
 export default {
   name: 'Header',
+  components: {
+    Bookmarks,
+  },
 };
 </script>
 <style scoped>
@@ -30,6 +37,7 @@ ul {
   background-color: #1d1283;
   padding: 0;
   margin: 0 0 1.5rem 0;
+  justify-content: space-between;
 }
 ul li a {
   padding: 14px 16px;
