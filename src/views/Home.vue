@@ -3,6 +3,9 @@
     <!-- <Header /> -->
     <HelloWorld msg="Router/Page based content goes here. " />
     <modal-prefer></modal-prefer>
+    <section>
+      <Slider :heading="`Vue Tutorials`" :videos="videoList" />
+    </section>
     <div id="learning-site-videos">
       <div class="video-grid-container">
         <LearningVideo
@@ -20,6 +23,7 @@
 import HelloWorld from '@/components/HelloWorld.vue';
 import LearningVideo from '@/components/LearningVideo/index.vue';
 import ModalPrefer from '@/components/ModalPrefer/index.vue';
+import Slider from '@/components/Slider/index.vue';
 
 // constants
 import videoList from '@/constants';
@@ -30,6 +34,7 @@ export default {
     HelloWorld,
     ModalPrefer,
     LearningVideo,
+    Slider,
   },
   data() {
     return {
@@ -39,10 +44,12 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+section { margin: 30px auto; }
 .wrapper {
   padding: 12px 16px;
   margin: 0 auto;
+  max-width: 1200px;
 }
 .video-grid-container {
     display: grid;
