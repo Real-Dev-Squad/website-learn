@@ -13,6 +13,7 @@
     "@vue/cli-plugin-router": "~4.5.0",
     "@vue/compiler-sfc": "^3.0.0",
     "core-js": "^3.6.5",
+    "swiper": "^6.8.1",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -24,7 +25,9 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^7.0.0"
+    "eslint-plugin-vue": "^7.0.0",
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.2.0"
   },
   "eslintConfig": {
     "root": true,
@@ -39,7 +42,9 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "linebreak-style": 0
+      "linebreak-style": 0,
+      "vue/no-unused-components": 0,
+      "import/no-extraneous-dependencies": 0
     }
   },
   "browserslist": [
