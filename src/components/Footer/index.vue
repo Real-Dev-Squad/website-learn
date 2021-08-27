@@ -1,6 +1,9 @@
 <template>
   <footer class="footer-container">
       <h1>Footer Goes Here</h1>
+      <p>The contents of this website are deployed from this
+        <a target="_blank" href="https://github.com/Real-Dev-Squad/website-learn/">open sourced repo</a>
+      </p>
   </footer>
 </template>
 
