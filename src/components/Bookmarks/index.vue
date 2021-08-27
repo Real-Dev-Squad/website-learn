@@ -49,7 +49,6 @@ export default {
   color: #fff;
   height: 63px;
   cursor: pointer;
-  margin-right: 20px;
 }
 .bookmarks-container {
   height: 100%;
