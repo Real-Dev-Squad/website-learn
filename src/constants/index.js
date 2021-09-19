@@ -6,7 +6,6 @@ const videoList = [
     source: "https://www.youtube.com/embed/gdZH7Anh_6w",
     thumbnail: "https://img.youtube.com/vi/gdZH7Anh_6w/0.jpg",
     author: "Someone",
-    bookmarked: true,
   },
   {
     id: 1,
@@ -14,7 +13,6 @@ const videoList = [
     source: "https://www.youtube.com/embed/FMl8vXPGqCI",
     thumbnail: "https://img.youtube.com/vi/FMl8vXPGqCI/0.jpg",
     author: "Buddy",
-    bookmarked: false,
   },
   {
     id: 2,
@@ -22,7 +20,6 @@ const videoList = [
     source: "https://www.youtube.com/embed/MhkGQAoc7bc",
     thumbnail: "https://img.youtube.com/vi/MhkGQAoc7bc/0.jpg",
     author: "Someones Buddy",
-    bookmarked: true,
   },
   {
     id: 3,
@@ -30,7 +27,6 @@ const videoList = [
     source: "https://www.youtube.com/embed/FMl8vXPGqCI",
     thumbnail: "https://img.youtube.com/vi/FMl8vXPGqCI/0.jpg",
     author: "Buddy",
-    bookmarked: false,
   },
   {
     id: 4,
@@ -38,7 +34,6 @@ const videoList = [
     source: "https://www.youtube.com/embed/MhkGQAoc7bc",
     thumbnail: "https://img.youtube.com/vi/MhkGQAoc7bc/0.jpg",
     author: "Someones Buddy",
-    bookmarked: true,
   },
   {
     id: 5,
@@ -46,7 +41,6 @@ const videoList = [
     source: "https://www.youtube.com/embed/FMl8vXPGqCI",
     thumbnail: "https://img.youtube.com/vi/FMl8vXPGqCI/0.jpg",
     author: "Buddy",
-    bookmarked: false,
   },
   {
     id: 6,
@@ -54,7 +48,6 @@ const videoList = [
     source: "https://www.youtube.com/embed/MhkGQAoc7bc",
     thumbnail: "https://img.youtube.com/vi/MhkGQAoc7bc/0.jpg",
     author: "Someones Buddy",
-    bookmarked: true,
   },
 ];
 

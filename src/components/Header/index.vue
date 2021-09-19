@@ -9,24 +9,16 @@
             src="@/../public/images/rds-logo.png"
             alt="Real Dev Squad Logo"
           />
-          RDS - Learn Site
+          Real DS - Learn Site
         </a>
-      </li>
-      <li>
-        <Bookmarks />
       </li>
     </ul>
   </header>
 </template>
 
 <script>
-import Bookmarks from '@/components/Bookmarks/index.vue';
-
 export default {
   name: 'Header',
-  components: {
-    Bookmarks,
-  },
 };
 </script>
 <style scoped>
