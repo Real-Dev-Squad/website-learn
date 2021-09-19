@@ -1,8 +1,5 @@
 <template>
   <Header />
-  <!-- <div id="nav">
-    <router-link to="/">Home</router-link> |
-  </div> -->
   <main>
     <router-view/>
   </main>
@@ -29,7 +26,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-
   height: 100vh;
   /* grid container settings */
   display: grid;
