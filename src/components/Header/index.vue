@@ -21,7 +21,7 @@
         <a href="https://www.realdevsquad.com/events.html">Events</a>
       </li>
       <li>
-        <router-link class="active" to="/">Home</router-link>
+        <router-link class="active" to="/">Learn</router-link>
       </li>
       <li>
         <a href="https://members.realdevsquad.com/">Members</a>
