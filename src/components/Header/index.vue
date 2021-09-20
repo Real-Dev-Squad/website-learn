@@ -9,8 +9,28 @@
             src="@/../public/images/rds-logo.png"
             alt="Real Dev Squad Logo"
           />
-          Real DS - Learn Site
         </a>
+      </li>
+      <li>
+        <a href="https://www.realdevsquad.com">Home</a>
+      </li>
+      <li>
+        <a href="https://welcome.realdevsquad.com/">Welcome</a>
+      </li>
+      <li>
+        <a href="https://www.realdevsquad.com/events.html">Events</a>
+      </li>
+      <li>
+        <router-link class="active" to="/">Home</router-link>
+      </li>
+      <li>
+        <a href="https://members.realdevsquad.com/">Members</a>
+      </li>
+      <li>
+        <a href="https://crypto.realdevsquad.com/">Crypto</a>
+      </li>
+      <li>
+        <a href="https://status.realdevsquad.com/">Status</a>
       </li>
     </ul>
   </header>
@@ -29,7 +49,6 @@ ul {
   background-color: #1d1283;
   padding: 0;
   margin: 0 0 1.5rem 0;
-  justify-content: space-between;
 }
 ul li a {
   padding: 14px 16px;
@@ -37,6 +56,7 @@ ul li a {
   align-items: center;
   color: #fff;
   text-decoration: none;
+  min-height: 35px;
 }
 ul li a img{
   margin-right: 8px;
