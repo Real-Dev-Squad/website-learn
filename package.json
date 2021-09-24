@@ -5,7 +5,9 @@
   "scripts": {
     "build": "vue-cli-service build",
     "start": "vue-cli-service serve --port $PORT",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "@vue/cli-plugin-router": "~4.5.0",
@@ -18,15 +20,22 @@
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@storybook/addon-actions": "^6.3.8",
+    "@storybook/addon-essentials": "^6.3.8",
+    "@storybook/addon-links": "^6.3.8",
+    "@storybook/vue3": "^6.3.8",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/eslint-config-airbnb": "^5.0.2",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.0.0",
     "node-sass": "^6.0.1",
-    "sass-loader": "^10.2.0"
+    "sass-loader": "^10.2.0",
+    "vue-loader": "^16.5.0"
   },
   "eslintConfig": {
     "root": true,
