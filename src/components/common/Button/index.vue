@@ -19,7 +19,7 @@ export default {
     size: {
       type: String,
       validator: function (value) {
-        return ['small', 'medium', 'large'].indexOf(value) !== -1;
+        return ['small', 'medium', 'large', 'ellipsis'].indexOf(value) !== -1;
       },
     },
     backgroundColor: {
@@ -76,5 +76,13 @@ export default {
   .learn-button--large {
     font-size: 16px;
     padding: 12px 24px;
+  }
+  .learn-button--ellipsis {
+    border: none;
+    box-shadow: none;
+  }
+  .learn-button--ellipsis:after {
+    content: '\2807';
+    font-size: 20px;
   }
 </style>

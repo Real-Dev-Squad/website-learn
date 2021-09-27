@@ -6,7 +6,7 @@ export default {
   title: 'Shared/Components/Button',
   argTypes: {
     backgroundColor: { control: 'color' },
-    size: { control: { type: 'select', options: ['small', 'medium', 'large'] } },
+    size: { control: { type: 'select', options: ['small', 'medium', 'large', 'ellipsis'] } },
     onClick: {},
   },
 };
@@ -44,4 +44,10 @@ export const Small = Template.bind({});
 Small.args = {
   size: 'small',
   label: 'Button',
+};
+
+export const Ellipsis = Template.bind({});
+Ellipsis.args = {
+  size: 'ellipsis',
+  label: '',
 };
