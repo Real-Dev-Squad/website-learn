@@ -33,6 +33,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.0.0",
+    "msw": "^0.35.0",
     "node-sass": "^6.0.1",
     "sass-loader": "^10.2.0",
     "vue-loader": "^16.5.0"
@@ -59,5 +60,8 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "msw": {
+    "workerDirectory": "public"
+  }
 }
