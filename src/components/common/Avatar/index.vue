@@ -9,18 +9,11 @@ import DEFAULT_IMAGE from '../../../assets/dummy-image.png';
 export default {
   name: 'Avatar',
   props: {
-    label: {
-      type: String,
-      required: true,
-    },
     size: {
       type: String,
       validator(value) {
         return ['small', 'medium', 'large'].indexOf(value) !== -1;
       },
-    },
-    backgroundColor: {
-      type: String,
     },
   },
   setup(prop) {
@@ -37,8 +30,6 @@ export default {
 </script>
 <style scoped>
 .learn-avatar {
-    font-family: Helvetica, Arial, sans-serif;
-    font-size: 1rem;
     padding: 0.2rem;
     border-radius: 50%;
     border: 1px solid black;
