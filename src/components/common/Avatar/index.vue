@@ -4,7 +4,7 @@
 
 <script>
 import { reactive, computed } from 'vue';
-import DEFAULT_IMAGE from '../../../assets/dummy-image.png';
+import DEFAULT_IMAGE from '../../../../public/images/dummy-image.png';
 
 export default {
   name: 'Avatar',
