@@ -2,13 +2,16 @@
   <header>
     <ul>
       <li>
-        <a href="#" class="logo">
+        <a
+          href="#"
+          class="logo"
+        >
           <img
             width="35"
             height="35"
             src="@/../public/images/rds-logo.png"
             alt="Real Dev Squad Logo"
-          />
+          >
         </a>
       </li>
       <li>
@@ -21,7 +24,12 @@
         <a href="https://www.realdevsquad.com/events.html">Events</a>
       </li>
       <li>
-        <router-link class="active" to="/">Learn</router-link>
+        <router-link
+          class="active"
+          to="/"
+        >
+          Learn
+        </router-link>
       </li>
       <li>
         <a href="https://members.realdevsquad.com/">Members</a>
@@ -38,7 +46,7 @@
 
 <script>
 export default {
-  name: 'Header',
+  name : "Header",
 };
 </script>
 <style scoped>

@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  name: 'Home',
+  name : "Home",
+  mounted() {
+    console.log( process.env.VUE_APP_fuck );
+  },
 };
 </script>
 
