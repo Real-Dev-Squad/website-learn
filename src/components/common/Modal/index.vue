@@ -23,7 +23,7 @@
 </template>
 <script>
 export default {
-  name : "Modal",
+  name: 'Modal',
 };
 </script>
 <style scoped>
