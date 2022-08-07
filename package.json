@@ -62,8 +62,7 @@
       "eslint --fix",
       "vue-cli-service lint",
       "git add"
-    ],
-    "./**": ["git add"]
+    ]
   },
   "browserslist": [
     "> 1%",
