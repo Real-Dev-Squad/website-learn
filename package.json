@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit",
     "start": "vue-cli-service serve --port $PORT",
     "lint": "vue-cli-service lint",
     "prepare": "husky install .husky"
@@ -23,8 +24,12 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-plugin-unit-jest": "~5.0.0",
     "@vue/eslint-config-airbnb": "^5.0.2",
+    "@vue/test-utils": "^2.0.2",
+    "@vue/vue3-jest": "^27.0.0-alpha.1",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^27.0.6",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^7.0.0",
@@ -50,7 +55,18 @@
       "linebreak-style": 0,
       "vue/no-unused-components": 0,
       "import/no-extraneous-dependencies": 0
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
   },
   "husky": {
     "hooks": {
