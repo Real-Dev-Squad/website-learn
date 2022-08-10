@@ -40,15 +40,36 @@
       <li>
         <a href="https://status.realdevsquad.com/">Status</a>
       </li>
+      <li>
+        <button @click="openGithubConsentScreen">
+          {{ buttonText }}
+        </button>
+      </li>
     </ul>
   </header>
 </template>
 
-<script>
-export default {
-  name: 'Header',
-};
+<script setup>
+import { ref, onMounted } from 'vue';
+import httpClient from '../../api/index';
+
+// Reactive state
+const buttonText = ref('Login With Github');
+
+function openGithubConsentScreen() {
+  window.location.replace('https://github.com/login/oauth/authorize?client_id=dd94eeb9c1e0420c026c');
+}
+
+onMounted(() => {
+  httpClient.get('/users/self').then((res) => {
+    buttonText.value = `Welcome ${res.data.github_display_name}`;
+  }).catch((err) => {
+    console.log(err);
+  });
+});
+
 </script>
+
 <style scoped>
 ul {
   list-style: none;
@@ -65,6 +86,9 @@ ul li a {
   color: #fff;
   text-decoration: none;
   min-height: 35px;
+}
+ul:last-child {
+  align-items:center;
 }
 ul li a img{
   margin-right: 8px;
