@@ -3,7 +3,7 @@
   <main>
     <router-view />
   </main>
-  <Modal/>
+
   <Footer />
 </template>
 

@@ -27,10 +27,10 @@
           </div>
           <!--footer-->
           <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
-            <button class="text-white bg-blue-800 border border-solid border-blue-500 hover:bg-blue-900 hover:text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" @click="toggleModal()">
+            <button class="text-white bg-blue-800 border border-solid border-blue-500 hover:bg-blue-900 hover:text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" @click="toggleModal">
               Close
             </button>
-            <button class="text-white bg-blue-800 border border-solid border-blue-500 hover:bg-blue-900 hover:text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" @click="toggleModal()">
+            <button class="text-white bg-blue-800 border border-solid border-blue-500 hover:bg-blue-900 hover:text-white active:bg-blue-600 font-bold uppercase text-sm px-6 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150" type="button" @click="toggleModal">
               Next
             </button>
           </div>
