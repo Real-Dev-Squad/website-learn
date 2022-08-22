@@ -45,10 +45,10 @@
 import { ref } from 'vue';
 
 export default {
-  name: 'Model',
+  name: 'Modal',
   props: {
-    modelHeading: String,
-    modelContent: String,
+    modalHeading: String,
+    modalContent: String,
     buttonName: String,
   },
   setup() {
