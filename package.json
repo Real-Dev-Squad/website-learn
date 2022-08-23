@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && yarn start",
     "start": "vue-cli-service serve --port $PORT",
     "lint": "vue-cli-service lint",
     "prepare": "husky install .husky"
