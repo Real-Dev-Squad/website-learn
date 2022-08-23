@@ -1,7 +1,8 @@
 import axios from 'axios';
+const baseUrl = import.meta.env.BASE_URL;
 
 const httpClient = axios.create({
-  baseURL: process.env.BASE_URL,
+  baseURL: baseUrl,
   headers: {
     'Content-Type': 'application/json',
   },
