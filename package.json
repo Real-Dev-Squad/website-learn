@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "tailwind-merge": "^1.6.0",
     "vue": "^3.2.37",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
@@ -43,6 +44,7 @@
       "linebreak-style": 0,
       "vue/no-unused-components": 0,
       "import/no-extraneous-dependencies": 0,
+      "max-len": "off",
       "vue/multi-word-component-names": "off"
     }
   },
