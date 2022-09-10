@@ -1,5 +1,5 @@
 <template>
-    <div :class="twMerge(`border-2 border-solid rounded-full animate-spin`,sizeConfig[size],`border-b-${emptyColor} border-r-${emptyColor} border-t-${color} border-l-${color}`)"></div>
+    <div :class="twMerge(`border-${thickness} border-solid rounded-full animate-[spin_${speed}_infinite_linear]`, sizeConfig[size],`border-t-${color} border-l-${color} border-b-${emptyColor} border-r-${emptyColor}`)"></div>
 </template>
 
 <script setup>
@@ -20,6 +20,17 @@ defineProps({
     color:{
         type:String,
         default:"black"
+    },
+    speed: {
+        type: String,
+        default: "700ms"
+    },
+    thickness : {
+        type: String,
+        default: "2",
+        validator(value){
+            return ["2","4","8"].includes(value);
+        }
     }
 })
 const sizeConfig = {

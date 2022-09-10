@@ -5,17 +5,7 @@ module.exports = {
   ],
   darkMode: 'media',
   theme: {
-    extend: {
-      keyframes: {
-        spin: {
-          '0%': { transform: 'rotate(0deg)' },
-          '100%': { transform: 'rotate(360deg)' },
-        }
-      },
-      animation: {
-        'spin': 'spin 700ms linear infinite',
-      }
-    },
+    extend: {},
   },
   safelist:[
     {
@@ -23,7 +13,11 @@ module.exports = {
     },
     {
       pattern: /border-(l|t)-(black)/,
-    }
+    },
+    "animate-[spin_700ms_infinite_linear]",
+    {
+      pattern: /border-(2|4|8)/,
+    },
   ],
   variants: {
     extend: {},
