@@ -3,56 +3,49 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "vue-cli-service build",
-    "start": "vue-cli-service serve --port $PORT",
-    "lint": "vue-cli-service lint",
+    "build": "vite build",
+    "dev": "vite",
+    "serve": "vite preview",
+    "lint": "eslint .",
+    "lint-fix": "eslint . --fix",
     "prepare": "husky install .husky"
   },
   "dependencies": {
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
     "axios": "^0.27.2",
-    "core-js": "^3.6.5",
-    "dotenv": "^16.0.1",
-    "vue": "^3.0.0",
+    "tailwind-merge": "^1.6.0",
+    "vue": "^3.2.37",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/eslint-config-airbnb": "^5.0.2",
-    "autoprefixer": "^9",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
+    "@vitejs/plugin-vue": "^3.0.3",
+    "autoprefixer": "^10.4.8",
+    "eslint": "^8.22.0",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-vue": "^7.0.0",
+    "eslint-plugin-vue": "^9.4.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "node-sass": "^7.0.0",
-    "postcss": "^7",
-    "sass-loader": "^10.2.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "vite": "^3.0.9"
   },
   "eslintConfig": {
     "root": true,
     "env": {
       "browser": true,
-      "node": true
+      "node": true,
+      "es2021": true
     },
     "extends": [
-      "plugin:vue/vue3-essential",
-      "@vue/airbnb"
+      "eslint:recommended",
+      "plugin:vue/vue3-essential"
     ],
-    "parserOptions": {
-      "parser": "babel-eslint"
-    },
     "rules": {
       "linebreak-style": 0,
       "vue/no-unused-components": 0,
-      "import/no-extraneous-dependencies": 0
+      "import/no-extraneous-dependencies": 0,
+      "max-len": "off",
+      "vue/multi-word-component-names": "off"
     }
   },
   "husky": {
@@ -62,8 +55,7 @@
   },
   "lint-staged": {
     "**/*.{js,vue}": [
-      "eslint --fix",
-      "vue-cli-service lint",
+      "yarn lint",
       "git add"
     ]
   },

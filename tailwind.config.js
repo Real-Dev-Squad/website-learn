@@ -1,13 +1,24 @@
 module.exports = {
   content: [
-    './public/index.html',
+    './index.html',
     './src/**/*.{vue,js,ts,jsx,tsx}',
   ],
-  purge: [],
   darkMode: 'media',
   theme: {
     extend: {},
   },
+  safelist:[
+    {
+      pattern: /border-(b|r)-(transparent)/,
+    },
+    {
+      pattern: /border-(l|t)-(black)/,
+    },
+    "animate-[spin_700ms_infinite_linear]",
+    {
+      pattern: /border-(2|4|8)/,
+    },
+  ],
   variants: {
     extend: {},
   },
