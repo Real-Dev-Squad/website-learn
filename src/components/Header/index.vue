@@ -9,7 +9,7 @@
           <img
             width="35"
             height="35"
-            src="@/../public/images/rds-logo.png"
+            src="@/assets/images/rds-logo.png"
             alt="Real Dev Squad Logo"
           >
         </a>
@@ -45,9 +45,7 @@
 </template>
 
 <script>
-export default {
-  name: 'Header',
-};
+
 </script>
 <style scoped>
 ul {
