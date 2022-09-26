@@ -3,6 +3,7 @@
   <main>
     <router-view />
   </main>
+
   <Footer />
 </template>
 
@@ -15,6 +16,7 @@ export default {
   components: {
     Header,
     Footer,
+
   },
 };
 </script>
