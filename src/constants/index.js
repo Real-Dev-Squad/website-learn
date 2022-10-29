@@ -51,4 +51,15 @@ const videoList = [
   },
 ];
 
+export const DATA_TYPES = {
+	JSON: "JSON",
+	INTEGER: "INTEGER",
+	STRING: "STRING",
+};
+
+export const LOCAL_STORAGE_KEYS = {
+	ONBOARDING_STEP: "onboardingForm.step",
+	ONBOARDING_RESPONSES: "onboardingForm.responses",
+};
+
 export default videoList;
