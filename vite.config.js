@@ -9,5 +9,20 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
-  }
+  },
+  build: {
+    rollupOptions: {
+      // https://rollupjs.org/guide/en/#outputmanualchunks
+      output: {
+        manualChunks: {
+          'about': [
+            './src/views/About.vue',
+          ],
+          'on-board': [
+            '../src/views/Onboard.vue',
+          ],
+        },
+        },
+        }
+    }
 })

@@ -28,11 +28,6 @@ module.exports = {
     {
       pattern: /border-(2|4|8)/,
     },
-  ],
-  variants: {
-    extend: {},
-  },
-  safelist:[
     "text-white",
     ...(['y','x','l','r','t','b'].flatMap((dir)=>`border-${dir}-[0.375rem]`)),
     {
@@ -42,7 +37,9 @@ module.exports = {
     }, {
       pattern: /m(r|l|t|b)-(\d)+/,
     },
-    
   ],
+  variants: {
+    extend: {},
+  },
   plugins: [],
 };

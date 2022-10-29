@@ -51,4 +51,9 @@ const videoList = [
   },
 ];
 
+export const LOCAL_STORAGE_KEYS = {
+	ONBOARDING_STEP: "onboardingForm.step",
+	ONBOARDING_RESPONSES: "onboardingForm.responses",
+};
+
 export default videoList;
