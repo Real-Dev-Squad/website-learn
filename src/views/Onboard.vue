@@ -15,10 +15,11 @@ import OnboardStep from "@/components/OnboardStep/index.vue";
 import ONBOARDING_STEPS_CONFIG from "../constants/onboarding-steps-config.js";
 import * as LocalStorageUtils from "../utils/LocalStorageUtils";
 import { provide, reactive, ref, watch } from "vue";
-import { DATA_TYPES, LOCAL_STORAGE_KEYS } from "@/constants/index.js";
+import { LOCAL_STORAGE_KEYS } from "@/constants/index.js";
+import { LOCAL_STORAGE_DATA_TYPES } from "@/constants/local-storage.js";
 
 const persistedOnboardingData = LocalStorageUtils.getData(LOCAL_STORAGE_KEYS.ONBOARDING_RESPONSES)
-const persistedStepCount = LocalStorageUtils.getData(LOCAL_STORAGE_KEYS.ONBOARDING_STEP, DATA_TYPES.INTEGER)
+const persistedStepCount = LocalStorageUtils.getData(LOCAL_STORAGE_KEYS.ONBOARDING_STEP, LOCAL_STORAGE_DATA_TYPES.INTEGER)
 const stepCount = persistedStepCount == null ? 0 : persistedStepCount;
 const formInitalValues = persistedOnboardingData == null ? {} : persistedOnboardingData;
 const currentStepCount = ref(stepCount);

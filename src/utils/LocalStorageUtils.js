@@ -1,11 +1,11 @@
-import { DATA_TYPES } from "@/constants";
+import { LOCAL_STORAGE_DATA_TYPES } from "@/constants/local-storage";
 
-export function getData(key, format = DATA_TYPES.JSON) {
+export function getData(key, format = LOCAL_STORAGE_DATA_TYPES.JSON) {
   const data = localStorage.getItem(key);
   if(!data) return null;
   switch(format) {
-    case DATA_TYPES.JSON: return JSON.parse(data);
-    case DATA_TYPES.INTEGER: return Number.parseInt(data);
+    case LOCAL_STORAGE_DATA_TYPES.JSON: return JSON.parse(data);
+    case LOCAL_STORAGE_DATA_TYPES.INTEGER: return Number.parseInt(data);
   }
 }
 
