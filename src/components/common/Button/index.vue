@@ -1,6 +1,6 @@
 <template>
   <button
-    type="button"
+    :type="type"
     :class="twMerge('overflow-hidden break-all transition duration-300 ease-in-out rounded-sm cursor-pointer w-max overflow-ellipsis whitespace-nowrap transform min-w-[4rem] flex items-center justify-center active:scale-90',sizeConfig[size].button,variantConfig[variant].button,'disabled:active:scale-100 disabled:opacity-40 disabled:cursor-not-allowed')"
     :disabled="isDisabled || isLoading"
     @click="onClick"
@@ -19,9 +19,13 @@
 import { twMerge } from 'tailwind-merge';
 import Spinner from '../Spinner/index.vue';
 defineProps({
-  onClick:Object,
+  onClick:Function,
   iconRight:String,
   iconLeft:String,
+  type:{
+    type:String,
+    default:'button'
+  },
   size:{
     type:String,
     default:"sm",
